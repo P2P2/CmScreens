@@ -47,7 +47,12 @@ namespace CmScreens {
 
         public void ScreenClosing(IScreen screen)
         {
-            DeactivateItem(screen, false);
+            if (!IsActive)
+            {
+                return;
+            }
+
+            Items.Remove(screen);
         }
     }
 }
