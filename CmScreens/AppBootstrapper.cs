@@ -16,6 +16,7 @@ namespace CmScreens {
             container.Singleton<IWindowManager, WindowManager>();
             container.Singleton<IEventAggregator, EventAggregator>();
             container.PerRequest<IShell, ShellViewModel>();
+            container.PerRequest<IMyScreen, MyScreenViewModel>();
         }
 
         protected override object GetInstance(Type service, string key) {

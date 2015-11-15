@@ -2,11 +2,12 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Grid Background="White">
-        <TextBlock Text="Hello Caliburn Micro!"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontSize="20" />
+    <Grid Background="White" FocusManager.FocusedElement="{Binding ElementName=Ticker}">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Ticker:" FontSize="20" />
+            <TextBox x:Name="Ticker" Margin="12 0 0 0" FontSize="20" MinWidth="100" CharacterCasing="Upper" VerticalAlignment="Center" />
+            <Button x:Name="AddScreen" Margin="12 0 0 0" Content="Add..." FontSize="20" IsDefault="True" />
+        </StackPanel>
     </Grid>
 
 </Window>
